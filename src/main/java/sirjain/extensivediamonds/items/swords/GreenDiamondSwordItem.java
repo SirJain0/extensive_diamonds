@@ -9,8 +9,8 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 
 public class GreenDiamondSwordItem extends SwordItem {
-	public GreenDiamondSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Item.Settings settings) {
-		super(toolMaterial, attackDamage, attackSpeed, settings);
+	public GreenDiamondSwordItem(ToolMaterial toolMaterial, Item.Settings settings) {
+		super(toolMaterial, settings);
 	}
 
 	@Override

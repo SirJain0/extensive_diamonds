@@ -8,8 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 
 public class FusedDiamondHoeItem extends HoeItem {
-	public FusedDiamondHoeItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
-		super(material, attackDamage, attackSpeed, settings);
+	public FusedDiamondHoeItem(ToolMaterial material, Settings settings) {
+		super(material, settings);
 	}
 
 	@Override

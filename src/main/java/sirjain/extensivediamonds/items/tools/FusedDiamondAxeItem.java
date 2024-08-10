@@ -8,8 +8,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 
 public class FusedDiamondAxeItem extends AxeItem {
-	public FusedDiamondAxeItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
-		super(material, attackDamage, attackSpeed, settings);
+	public FusedDiamondAxeItem(ToolMaterial material, Settings settings) {
+		super(material, settings);
 	}
 
 	@Override

@@ -6,16 +6,17 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.World;
 
 public class EDDiamondBlock extends ExperienceDroppingBlock {
 	private final int amplifier;
-	private final StatusEffect steppedEffect;
+	private final RegistryEntry<StatusEffect> steppedEffect;
 
-	public EDDiamondBlock(Settings settings, int amplifier, StatusEffect steppedEffect) {
-		super(settings);
+	public EDDiamondBlock(Settings settings, int amplifier, RegistryEntry<StatusEffect> steppedEffect) {
+		super(UniformIntProvider.create(3, 5), settings);
 		this.amplifier = amplifier;
 		this.steppedEffect = steppedEffect;
 	}

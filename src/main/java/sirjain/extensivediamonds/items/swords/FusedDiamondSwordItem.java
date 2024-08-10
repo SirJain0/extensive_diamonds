@@ -9,8 +9,8 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 
 public class FusedDiamondSwordItem extends SwordItem {
-	public FusedDiamondSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Item.Settings settings) {
-		super(toolMaterial, attackDamage, attackSpeed, settings);
+	public FusedDiamondSwordItem(ToolMaterial toolMaterial, Item.Settings settings) {
+		super(toolMaterial, settings);
 	}
 
 	@Override

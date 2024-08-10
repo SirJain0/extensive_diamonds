@@ -11,7 +11,7 @@ public class EDPaintings {
 	public static final PaintingVariant GEMS_LOGO = registerPainting("gems_logo", new PaintingVariant(16, 16));
 
 	private static PaintingVariant registerPainting(String name, PaintingVariant paintingVariant) {
-		return Registry.register(Registries.PAINTING_VARIANT, new Identifier(ExtensiveDiamonds.MOD_ID, name), paintingVariant);
+		return Registry.register(Registries.PAINTING_VARIANT, Identifier.of(ExtensiveDiamonds.MOD_ID, name), paintingVariant);
 	}
 
 	public static void registerPaintings() {

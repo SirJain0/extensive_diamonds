@@ -1,6 +1,7 @@
 package sirjain.extensivediamonds.block;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -10,6 +11,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import sirjain.extensivediamonds.ExtensiveDiamonds;
@@ -65,35 +67,35 @@ public class EDBlocks {
 	public static Block registerOre(String id) {
 		return Registry.register(
 			Registries.BLOCK,
-			new Identifier(ExtensiveDiamonds.MOD_ID, id),
+			Identifier.of(ExtensiveDiamonds.MOD_ID, id),
 			new ExperienceDroppingBlock(
-				FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)
+				UniformIntProvider.create(0, 3),
+				AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)
 					.requiresTool()
-					.strength(3.0f, 3.0f),
-				UniformIntProvider.create(0, 3)
-			)
+					.strength(3.0f, 3.0f)
+				)
 		);
 	}
 
 	public static Block registerDeepslateOre(String id) {
 		return Registry.register(
 			Registries.BLOCK,
-			new Identifier(ExtensiveDiamonds.MOD_ID, id),
+			Identifier.of(ExtensiveDiamonds.MOD_ID, id),
 			new ExperienceDroppingBlock(
-				FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE)
+				UniformIntProvider.create(0, 4),
+				AbstractBlock.Settings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)
 					.requiresTool()
-					.strength(3.0f, 3.0f),
-				UniformIntProvider.create(0, 4)
-			)
+					.strength(3.0f, 3.0f)
+				)
 		);
 	}
 
-	public static Block registerOreBlock(String id, StatusEffect effect) {
+	public static Block registerOreBlock(String id, RegistryEntry<StatusEffect> effect) {
 		return Registry.register(
 			Registries.BLOCK,
-			new Identifier(ExtensiveDiamonds.MOD_ID, id),
+			Identifier.of(ExtensiveDiamonds.MOD_ID, id),
 			new EDDiamondBlock(
-				FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)
+				AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK)
 					.requiresTool()
 					.strength(3.0f, 3.0f),
 				1, effect
@@ -104,7 +106,7 @@ public class EDBlocks {
 	public static Item registerBlockItem(String id, Block block) {
 		return Registry.register(
 			Registries.ITEM,
-			new Identifier(ExtensiveDiamonds.MOD_ID, id),
+			Identifier.of(ExtensiveDiamonds.MOD_ID, id),
 			new BlockItem(block, new Item.Settings())
 		);
 	}

@@ -8,8 +8,8 @@ import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolMaterial;
 
 public class FusedDiamondShovelItem extends ShovelItem {
-	public FusedDiamondShovelItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
-		super(material, attackDamage, attackSpeed, settings);
+	public FusedDiamondShovelItem(ToolMaterial material, Settings settings) {
+		super(material, settings);
 	}
 
 	@Override
