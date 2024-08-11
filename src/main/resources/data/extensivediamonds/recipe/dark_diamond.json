@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "extensivediamonds:block_of_red_diamond"
+      "item": "extensivediamonds:block_of_dark_diamond"
     }
   ],
   "result": {
     "count": 9,
-    "item": "extensivediamonds:red_diamond"
+    "id": "extensivediamonds:dark_diamond"
   }
 }

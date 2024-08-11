@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "extensivediamonds:green_diamond_ore"
   },
-  "result": "extensivediamonds:green_diamond",
+  "id": "extensivediamonds:green_diamond",
   "experience": 0.3,
   "cookingtime": 210
 }

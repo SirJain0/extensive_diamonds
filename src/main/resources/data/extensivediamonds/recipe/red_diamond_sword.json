@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "extensivediamonds:dark_diamond"
+      "item": "extensivediamonds:red_diamond"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "extensivediamonds:dark_diamond_sword",
+    "id": "extensivediamonds:red_diamond_sword",
     "count": 1
   }
 }

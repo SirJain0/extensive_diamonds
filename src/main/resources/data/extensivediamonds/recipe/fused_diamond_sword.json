@@ -7,14 +7,14 @@
   ],
   "key": {
     "#": {
-      "item": "extensivediamonds:green_diamond"
+      "item": "extensivediamonds:fused_diamond"
     },
     "/": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "extensivediamonds:green_diamond_sword",
+    "id": "extensivediamonds:fused_diamond_sword",
     "count": 1
   }
 }

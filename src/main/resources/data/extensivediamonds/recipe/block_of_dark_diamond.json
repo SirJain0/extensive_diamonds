@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "extensivediamonds:red_diamond"
+      "item": "extensivediamonds:dark_diamond"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
     "###"
   ],
   "result": {
-    "item": "extensivediamonds:block_of_red_diamond"
+    "id": "extensivediamonds:block_of_dark_diamond"
   }
 }

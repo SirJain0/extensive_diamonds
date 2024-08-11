@@ -1,20 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "##",
-    " /",
-    " /"
+    "###",
+    "# #"
   ],
   "key": {
     "#": {
       "item": "extensivediamonds:fused_diamond"
-    },
-    "/": {
-      "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "extensivediamonds:fused_diamond_hoe",
+    "id": "extensivediamonds:fused_diamond_helmet",
     "count": 1
   }
 }
