@@ -1,9 +1,13 @@
 {
   "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "diamond",
   "ingredient": {
     "item": "extensivediamonds:green_diamond_ore"
   },
-  "id": "extensivediamonds:green_diamond",
-  "experience": 0.3,
-  "cookingtime": 210
+  "result": {
+    "id": "extensivediamonds:green_diamond"
+  }
 }

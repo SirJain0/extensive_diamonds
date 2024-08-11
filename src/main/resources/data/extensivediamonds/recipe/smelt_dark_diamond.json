@@ -1,9 +1,13 @@
 {
   "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "diamond",
   "ingredient": {
     "item": "extensivediamonds:dark_diamond_ore"
   },
-  "id": "extensivediamonds:dark_diamond",
-  "experience": 0.4,
-  "cookingtime": 220
+  "result": {
+    "id": "extensivediamonds:dark_diamond"
+  }
 }
