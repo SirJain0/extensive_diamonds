@@ -18,8 +18,8 @@ import sirjain.extensivediamonds.clientutils.ClientUtil;
 
 import java.util.List;
 
-public class FusedDiamondArmor extends ArmorItem {
-    public FusedDiamondArmor(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
+public class FusedDiamondArmorItem extends ArmorItem {
+    public FusedDiamondArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
         super(material, type, settings);
     }
 
@@ -52,6 +52,6 @@ public class FusedDiamondArmor extends ArmorItem {
     }
 
     private boolean isWearingFusedDiamondArmor(LivingEntity wearer) {
-        return Lists.newArrayList(wearer.getArmorItems()).stream().filter(itemStack -> itemStack.getItem() instanceof FusedDiamondArmor).count() == 4;
+        return Lists.newArrayList(wearer.getArmorItems()).stream().filter(itemStack -> itemStack.getItem() instanceof FusedDiamondArmorItem).count() == 4;
     }
 }

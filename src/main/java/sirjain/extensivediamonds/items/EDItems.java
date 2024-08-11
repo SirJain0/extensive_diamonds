@@ -11,8 +11,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import sirjain.extensivediamonds.ExtensiveDiamonds;
 import sirjain.extensivediamonds.block.EDBlocks;
-import sirjain.extensivediamonds.items.material.FusedDiamondArmor;
-import sirjain.extensivediamonds.items.material.FusedDiamondArmorMaterial;
+import sirjain.extensivediamonds.items.material.EDArmorMaterials;
+import sirjain.extensivediamonds.items.material.FusedDiamondArmorItem;
 import sirjain.extensivediamonds.items.material.EDToolMaterials;
 import sirjain.extensivediamonds.items.swords.DarkDiamondSwordItem;
 import sirjain.extensivediamonds.items.swords.FusedDiamondSwordItem;
@@ -22,11 +22,6 @@ import sirjain.extensivediamonds.items.tools.FusedDiamondAxeItem;
 import sirjain.extensivediamonds.items.tools.FusedDiamondHoeItem;
 import sirjain.extensivediamonds.items.tools.FusedDiamondPickaxeItem;
 import sirjain.extensivediamonds.items.tools.FusedDiamondShovelItem;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 public class EDItems {
 	public static Item RED_DIAMOND;
@@ -140,7 +135,7 @@ public class EDItems {
 		return Registry.register(
 			Registries.ITEM,
 			Identifier.of(ExtensiveDiamonds.MOD_ID, id),
-			new FusedDiamondArmor(FusedDiamondArmorMaterial.MATERIAL, type, new Item.Settings().rarity(Rarity.UNCOMMON))
+			new FusedDiamondArmorItem(EDArmorMaterials.FUSED_DIAMOND_ARMOR_MATERIAL, type, new Item.Settings().rarity(Rarity.UNCOMMON).maxDamage(type.getMaxDamage(41)))
 		);
 	}
 }
