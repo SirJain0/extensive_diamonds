@@ -1,10 +1,7 @@
 package sirjain.extensivediamonds.items;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -49,15 +46,34 @@ public class EDItems {
 	}
 
 	public static void registerCombat() {
-		RED_DIAMOND_SWORD = registerCustomItem("red_diamond_sword", new RedDiamondSwordItem(EDToolMaterials.RED_DIAMOND, new Item.Settings()));
-		GREEN_DIAMOND_SWORD = registerCustomItem("green_diamond_sword", new GreenDiamondSwordItem(EDToolMaterials.GREEN_DIAMOND, new Item.Settings()));
-		DARK_DIAMOND_SWORD = registerCustomItem("dark_diamond_sword", new DarkDiamondSwordItem(EDToolMaterials.DARK_DIAMOND, new Item.Settings()));
+		RED_DIAMOND_SWORD = registerCustomItem("red_diamond_sword", new RedDiamondSwordItem(EDToolMaterials.RED_DIAMOND, new Item.Settings()
+			.attributeModifiers(SwordItem.createAttributeModifiers(EDToolMaterials.RED_DIAMOND, 5, -2.2f))));
 
-		FUSED_DIAMOND_SWORD = registerCustomItem("fused_diamond_sword", new FusedDiamondSwordItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings().rarity(Rarity.UNCOMMON)));
-		FUSED_DIAMOND_AXE = registerCustomItem("fused_diamond_axe", new FusedDiamondAxeItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings().rarity(Rarity.UNCOMMON)));
-		FUSED_DIAMOND_HOE = registerCustomItem("fused_diamond_hoe", new FusedDiamondHoeItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings().rarity(Rarity.UNCOMMON)));
-		FUSED_DIAMOND_SHOVEL = registerCustomItem("fused_diamond_shovel", new FusedDiamondShovelItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings().rarity(Rarity.UNCOMMON)));
-		FUSED_DIAMOND_PICKAXE = registerCustomItem("fused_diamond_pickaxe",new FusedDiamondPickaxeItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings().rarity(Rarity.UNCOMMON)));
+		GREEN_DIAMOND_SWORD = registerCustomItem("green_diamond_sword", new GreenDiamondSwordItem(EDToolMaterials.GREEN_DIAMOND, new Item.Settings()
+			.attributeModifiers(SwordItem.createAttributeModifiers(EDToolMaterials.GREEN_DIAMOND, 6, -2.2f))));
+
+		DARK_DIAMOND_SWORD = registerCustomItem("dark_diamond_sword", new DarkDiamondSwordItem(EDToolMaterials.DARK_DIAMOND, new Item.Settings()
+			.attributeModifiers(SwordItem.createAttributeModifiers(EDToolMaterials.DARK_DIAMOND, 8, -2.2f))));
+
+		FUSED_DIAMOND_SWORD = registerCustomItem("fused_diamond_sword", new FusedDiamondSwordItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings()
+			.rarity(Rarity.UNCOMMON)
+			.attributeModifiers(SwordItem.createAttributeModifiers(EDToolMaterials.FUSED_DIAMOND, 13, -2f))));
+
+		FUSED_DIAMOND_AXE = registerCustomItem("fused_diamond_axe", new FusedDiamondAxeItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings()
+			.rarity(Rarity.UNCOMMON)
+			.attributeModifiers(AxeItem.createAttributeModifiers(EDToolMaterials.FUSED_DIAMOND, 6, -2.4f))));
+
+		FUSED_DIAMOND_HOE = registerCustomItem("fused_diamond_hoe", new FusedDiamondHoeItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings()
+			.rarity(Rarity.UNCOMMON)
+			.attributeModifiers(HoeItem.createAttributeModifiers(EDToolMaterials.FUSED_DIAMOND, 3, -2.4f))));
+
+		FUSED_DIAMOND_SHOVEL = registerCustomItem("fused_diamond_shovel", new FusedDiamondShovelItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings()
+			.rarity(Rarity.UNCOMMON)
+			.attributeModifiers(ShovelItem.createAttributeModifiers(EDToolMaterials.FUSED_DIAMOND, 4, -2.4f))));
+
+		FUSED_DIAMOND_PICKAXE = registerCustomItem("fused_diamond_pickaxe",new FusedDiamondPickaxeItem(EDToolMaterials.FUSED_DIAMOND, new Item.Settings()
+			.rarity(Rarity.UNCOMMON)
+			.attributeModifiers(PickaxeItem.createAttributeModifiers(EDToolMaterials.FUSED_DIAMOND, 5, -2.4f))));
 	}
 
 	public static void registerArmorSprites() {
